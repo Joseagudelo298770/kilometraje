@@ -1,0 +1,8 @@
+import pandas as pd
+import matplotlib.pyplot  as plt
+from pandas.io.parsers.readers import read_csv
+datos = read_csv("/content/kilometraje.csv")
+datos.head(1)
+plt.boxplot(datos["Kilometraje"], vert=False, patch_artist=True, labels=["Kilometraje"])
+plt.title("Boxplot")
+plt.show()
