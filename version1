@@ -1,8 +1,10 @@
 import pandas as pd
-import matplotlib.pyplot  as plt
+import numpy as np
+import matplotlib.pyplot  as plt 
 from pandas.io.parsers.readers import read_csv
-datos = read_csv("/content/kilometraje.csv")
-datos.head(1)
-plt.boxplot(datos["Kilometraje"], vert=False, patch_artist=True, labels=["Kilometraje"])
+from scipy import stats 
+data = pd.read_csv('Libro2.csv', index_col=0, sep=';') 
+data2 = pd.read_csv("/content/Libro3.csv")
+plt.boxplot(data2["Peso VH"], vert=False, patch_artist=True, labels=["Peso VH"])
 plt.title("Boxplot")
 plt.show()
